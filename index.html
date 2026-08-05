@@ -5,42 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>games de luta</title>
     <style>
-        header{
+        header {
           background-color: rgb(2, 2, 115);
           color: #c5d3f4f7;
           text-align: center;
           max-width: 800px;
           margin: 0 auto;
+          padding: 20px;
         }
-        main{
+
+        main {
           background-color: #6b0101f7;
           color: #f0d0d0;
           text-align: center;
           max-width: 800px;
           margin: 0 auto;
+          padding: 20px;
+        }
+
+        /* --- Novas Classes para Estruturação --- */
+        .secao {
+          margin-bottom: 30px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          padding-bottom: 20px;
+        }
+
+        .texto-esquerda {
+          text-align: left;
+        }
+
+        .item-recurso {
+          margin-bottom: 15px;
+          background-color: rgba(0, 0, 0, 0.2);
+          padding: 12px;
+          border-radius: 6px;
+        }
+
+        .titulo-item {
+          font-weight: bold;
+          display: block;
+          margin-bottom: 5px;
+          color: #ffffff;
         }
     </style>
 </head>
 <body>
-     <header>
-    <h1> O basico de games de luta</h1>      
- <p>vou dizer e guiar para entenderem o basico de games de luta para começar e entender os games</p>
-     </header>
+
+    <header>
+        <h1>O básico de games de luta</h1>      
+        <p>Vou dizer e guiar para entenderem o básico de games de luta para começar e entender os games.</p>
+    </header>
+
     <main>
-        <h2> movimentação, o inicio</h2>
- <p>Na movimentação básica dos jogos de luta, dominar o controle de espaço (conhecido como footsies) é fundamental para garantir a vitória, pois permite definir quando atacar, defender ou se esquivar. Saber se posicionar corretamente no cenário possibilita manter uma distância segura dos golpes do adversário (o chamado spacing), punir erros com precisão e controlar o ritmo da partida, evitando ser encurralado na parede. Em resumo, antes de aprender combos complexos, é a movimentação inteligente que cria as oportunidades certas para aplicar seus ataques e neutralizar a estratégia do oponente.</p> 
-<h3>triangulo de interações</h3>
-<p> toda ação básica em um jogo de luta tem uma contra-ataque direto. O sistema central funciona assim:</p>
-<p> Ataque ganha de Agarrão: Golpes normais ou especiais atingem o oponente antes que a animação do agarrão se complete</p>
- <p> Defesa ganha de Ataque: Bloquear protege você de receber dano (exceto um dano mínimo de raspão de golpes especiais) e pode te deixar em vantagem</p>
-<p>Agarrão ganha de Defesa: O agarrão é a ferramenta projetada especificamente para quebrar a postura de um jogador que está defendendo constantemente.</p>
-<button onclick="botaoClicado(this)">👍 <span>0</span></button>
-</main>
+        <div class="secao">
+            <h2>Movimentação, o início</h2>
+            <p>Na movimentação básica dos jogos de luta, dominar o controle de espaço (conhecido como footsies) é fundamental para garantir a vitória, pois permite definir quando atacar, defender ou se esquivar. Saber se posicionar corretamente no cenário possibilita manter uma distância segura dos golpes do adversário (o chamado spacing), punir erros com precisão e controlar o ritmo da partida, evitando ser encurralado na parede. Em resumo, antes de aprender combos complexos, é a movimentação inteligente que cria as oportunidades certas para aplicar seus ataques e neutralizar a estratégia do oponente.</p> 
+            
+            <h3>Triângulo de Interações</h3>
+            <p>Toda ação básica em um jogo de luta tem um contra-ataque direto. O sistema central funciona assim:</p>
+            <p><strong>Ataque ganha de Agarrão:</strong> Golpes normais ou especiais atingem o oponente antes que a animação do agarrão se complete.</p>
+            <p><strong>Defesa ganha de Ataque:</strong> Bloquear protege você de receber dano (exceto um dano mínimo de raspão de golpes especiais) e pode te deixar em vantagem.</p>
+            <p><strong>Agarrão ganha de Defesa:</strong> O agarrão é a ferramenta projetada especificamente para quebrar a postura de um jogador que está defendendo constantemente.</p>
+        </div>
+
+        <div class="secao texto-esquerda">
+            <h2>O Jogo Mental e Recursos (Yomi, Condicionamento e Vantagem)</h2>
+            <p>Este é o pilar que transforma o jogo de luta em um "xadrez em alta velocidade". Ele é composto por três elementos principais:</p>
+
+            <div class="item-recurso">
+                <span class="titulo-item">Condicionamento e Leitura (Yomi):</span>
+                <span>Fazer o oponente se acostumar com um padrão seu para, no momento decisivo, você fazer o oposto. Exemplo: condicionar o oponente a defender no levantamento (knockdown) e, de repente, mandar um agarrão.</span>
+            </div>
+
+            <div class="item-recurso">
+                <span class="titulo-item">Tempo e Vantagem (Frame Data):</span>
+                <span>Entender de quem é a "vez" de atacar (turn-based system disfarçado de tempo real). Saber se você está em vantagem para continuar pressionando ou se precisa defender.</span>
+            </div>
+
+            <div class="item-recurso">
+                <span class="titulo-item">Gestão de Recursos:</span>
+                <span>Saber quando gastar sua barra de especial (Super, Drive, Burst, Meter), gerenciar sua vida e o tempo do round a seu favor.</span>
+            </div>
+        </div>
+
+        <button onclick="botaoClicado(this)">👍 <span>0</span></button>
+    </main>
+
+    <script>
+        function botaoClicado(botao) {
+            let texto = botao.querySelector("span");
+            texto.textContent++; 
+        }
+    </script>
 </body>
-<script>
- function botaoClicado(botao) {
-    let texto = botao.querySelector("span");
-    texto.textContent++; 
-}
-</script>
 </html>
