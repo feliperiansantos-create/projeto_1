@@ -34,13 +34,13 @@
 <p> Ataque ganha de Agarrão: Golpes normais ou especiais atingem o oponente antes que a animação do agarrão se complete</p>
  <p> Defesa ganha de Ataque: Bloquear protege você de receber dano (exceto um dano mínimo de raspão de golpes especiais) e pode te deixar em vantagem</p>
 <p>Agarrão ganha de Defesa: O agarrão é a ferramenta projetada especificamente para quebrar a postura de um jogador que está defendendo constantemente.</p>
-<button>👍 <span> 0 </span></button>
+<button onclick="botaoClicado(this)">👍 <span>0</span></button>
 </main>
 </body>
 <script>
-    function botaoClicado() {
-let texto = botao.querySelector("span");
-texto.textContent++;
+ function botaoClicado(botao) {
+    let texto = botao.querySelector("span");
+    texto.textContent++; 
 }
 </script>
 </html>
